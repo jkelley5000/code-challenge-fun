@@ -1,0 +1,13 @@
+Challenge: Image Carousel
+
+You are tasked with creating a simple image carousel using HTML, CSS, and JavaScript. 
+The carousel should display a set of images and allow the user to navigate through them using next and previous buttons.
+
+Requirements:
+
+Display a container that shows one image at a time with a fixed width and height.
+Include next and previous buttons to navigate between images.
+Clicking the next button should display the next image in the carousel.
+Clicking the previous button should display the previous image in the carousel.
+When reaching the end of the images, the next button should wrap around to the first image, 
+and vice versa for the previous button.
