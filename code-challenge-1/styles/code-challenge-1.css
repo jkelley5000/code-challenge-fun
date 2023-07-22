@@ -21,7 +21,8 @@ h1 {
 
 .carousel {
     width: 300px;
-    height: 305px;
+    height: 365px;
+    overflow-x: scroll;
     overflow-x: hidden;
     display: flex;
     flex-direction: row;
@@ -33,6 +34,10 @@ h1 {
 
 .carousel-image {
     width: 300px;
+}
+
+.carousel-label {
+    text-align: center;
 }
 
 .carousel-buttons {
