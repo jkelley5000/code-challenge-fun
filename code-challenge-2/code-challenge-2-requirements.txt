@@ -1,0 +1,13 @@
+Challenge: Editable To-Do List
+
+You are tasked with creating a simple to-do list application using HTML, CSS, and JavaScript. 
+The application should allow users to add, remove, and mark tasks as completed.
+
+Requirements:
+
+Display an input field and a button to add new tasks to the to-do list.
+When the user enters a task and clicks the "Add" button, the task should be added to the list.
+Each task should have a checkbox that users can click to mark the task as completed.
+Completed tasks should be visually distinguishable from incomplete tasks (e.g., crossed out text).
+Each task should have a "Delete" button to remove it from the list.
+The to-do list should persist even if the page is refreshed (you can use local storage to achieve this).
