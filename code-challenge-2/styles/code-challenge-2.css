@@ -38,12 +38,42 @@ h1 {
 
 .add-new-button {
     margin-left: 5px;
+}
+
+.add-new-button,
+.list-item-checkbox,
+.list-item-button {
     padding: 0;
     width: 35px;
     height: 35px;
     cursor: pointer;
 }
 
-.add-new-button img {
+.list-item-button {
+    margin-left: 5px;
+}
+
+.add-new-button img,
+.list-item-button img {
     width: 32px;
+}
+
+.list {
+    margin-top: 15px;
+    width: 300px;
+}
+
+.list-item {
+    width: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.list-item-checkbox {
+    width: 35px;
+    height: 35px;
+}
+
+.list-item-text {
+    font-size: 19px;
 }
