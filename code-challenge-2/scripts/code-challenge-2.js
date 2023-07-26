@@ -1,5 +1,22 @@
 document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', documentReady()) : documentReady();
 
+function addCheckboxEventListener() {
+    if (document.getElementsByClassName('list-item').length > 0) {
+        document.getElementById('list-item-complete-checkbox').addEventListener('click', function () {
+            const listItems = document.getElementsByClassName('list-item');
+            for (let i = 0; i < listItems.length; i++) {
+                const listItem = listItems[i];
+                const listItemCompleteCheckbox = listItem.children[0];
+                if (listItemCompleteCheckbox.checked) {
+                    listItem.children[1].classList += ' list-item-complete';
+                } else {
+                    listItem.children[1].classList = 'list-item-text';
+                }
+            }
+        });
+    }
+}
+
 function documentReady() {
     const list = document.getElementById('list');
     let listHTML = document.getElementById('list').innerHTML;
@@ -9,7 +26,7 @@ function documentReady() {
         const addNewInputValue = addNewInput.value.trim();
         if (addNewInputValue !== '') {
             list.innerHTML += `<div class="list-item">
-                <input type="checkbox" class="list-item-checkbox" />
+                <input type="checkbox" class="list-item-checkbox" id="list-item-complete-checkbox" />
                 <div class="list-item-text">${addNewInputValue}</div>
                 <div class="list-item-buttons">
                     <button class="list-item-button" id="edit-button">
@@ -21,6 +38,8 @@ function documentReady() {
                 </div>
             </div>`;
             addNewInput.value = '';
+
+            addCheckboxEventListener();
         }
     });
 

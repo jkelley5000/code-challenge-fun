@@ -77,3 +77,7 @@ h1 {
 .list-item-text {
     font-size: 19px;
 }
+
+.list-item-complete {
+    text-decoration: line-through;
+}
