@@ -48,10 +48,31 @@ function removeListItemFromLocalStorage(listItemToRemove) {
     }
 }
 
+function renderListItemsFromLocalStorage() {
+    let storedListItems = localStorage.getItem('listItems');
+    if (storedListItems !== null) {
+        storedListItems = JSON.parse(storedListItems);
+        storedListItems.forEach(function (listItem) {
+            list.innerHTML += `<div class="list-item">
+                <input type="checkbox" class="list-item-checkbox" id="list-item-complete-checkbox" />
+                <div class="list-item-text">${listItem}</div>
+                <div class="list-item-buttons">
+                    <button class="list-item-button" id="delete-button">
+                        <img src="images/delete.svg" />
+                    </button>
+                </div>
+            </div>`;
+        });
+        addEventListeners();
+    }
+}
+
 function documentReady() {
     const addNewInput = document.getElementById('add-new-input');
     const list = document.getElementById('list');
     let listHTML = document.getElementById('list').innerHTML;
+
+    renderListItemsFromLocalStorage();
 
     document.getElementById('add-new-button').addEventListener('click', function () {
         const addNewInputValue = addNewInput.value.trim();
