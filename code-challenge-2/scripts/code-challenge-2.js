@@ -14,9 +14,13 @@ function addEventListeners() {
             });
         }
 
-        document.getElementById('delete-button').addEventListener('click', function () {
-            this.parentElement.parentElement.remove();
-        });
+        const deleteButtons = document.getElementsByClassName('list-item-button');
+        for (let i = 0; i < deleteButtons.length; i++) {
+            const deleteButton = deleteButtons[i];
+            deleteButton.addEventListener('click', function () {
+                this.parentElement.parentElement.remove();
+            });
+        }
 
     }
 }
