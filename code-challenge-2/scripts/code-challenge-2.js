@@ -19,6 +19,7 @@ function addEventListeners() {
             const deleteButton = deleteButtons[i];
             deleteButton.addEventListener('click', function () {
                 this.parentElement.parentElement.remove();
+                removeListItemFromLocalStorage(this.parentElement.parentElement.children[1].innerText);
             });
         }
 
@@ -32,6 +33,17 @@ function addListItemToLocalStorage(newListItem) {
     } else {
         storedListItems = JSON.parse(storedListItems);
         storedListItems.push(newListItem);
+        localStorage.setItem('listItems', JSON.stringify(storedListItems));
+    }
+}
+
+function removeListItemFromLocalStorage(listItemToRemove) {
+    let storedListItems = localStorage.getItem('listItems');
+    if (storedListItems !== null) {
+        storedListItems = JSON.parse(storedListItems);
+        storedListItems = storedListItems.filter(function (listItem) {
+            return listItem !== listItemToRemove;
+        });
         localStorage.setItem('listItems', JSON.stringify(storedListItems));
     }
 }
