@@ -22,12 +22,23 @@ function addEventListeners() {
     }
 }
 
+function addListItemToLocalStorage(newListItem) {
+    let storedListItems = localStorage.getItem('listItems');
+    if (storedListItems === null) {
+        localStorage.setItem('listItems', JSON.stringify([newListItem]));
+    } else {
+        storedListItems = JSON.parse(storedListItems);
+        storedListItems.push(newListItem);
+        localStorage.setItem('listItems', JSON.stringify(storedListItems));
+    }
+}
+
 function documentReady() {
+    const addNewInput = document.getElementById('add-new-input');
     const list = document.getElementById('list');
     let listHTML = document.getElementById('list').innerHTML;
 
     document.getElementById('add-new-button').addEventListener('click', function () {
-        const addNewInput = document.getElementById('add-new-input');
         const addNewInputValue = addNewInput.value.trim();
         if (addNewInputValue !== '') {
             list.innerHTML += `<div class="list-item">
@@ -41,6 +52,7 @@ function documentReady() {
             </div>`;
             addNewInput.value = '';
 
+            addListItemToLocalStorage(addNewInputValue);
             addEventListeners();
         }
     });
