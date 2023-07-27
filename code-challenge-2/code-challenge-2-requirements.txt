@@ -1,4 +1,4 @@
-Challenge: Editable To-Do List
+Challenge: To-Do List
 
 You are tasked with creating a simple to-do list application using HTML, CSS, and JavaScript. 
 The application should allow users to add, remove, and mark tasks as completed.
