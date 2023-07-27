@@ -2,18 +2,17 @@ document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded'
 
 function addEventListeners() {
     if (document.getElementsByClassName('list-item').length > 0) {
-        document.getElementById('list-item-complete-checkbox').addEventListener('click', function () {
-            const listItems = document.getElementsByClassName('list-item');
-            for (let i = 0; i < listItems.length; i++) {
-                const listItem = listItems[i];
-                const listItemCompleteCheckbox = listItem.children[0];
-                if (listItemCompleteCheckbox.checked) {
-                    listItem.children[1].classList += ' list-item-complete';
+        const listItemCheckboxes = document.getElementsByClassName('list-item-checkbox');
+        for (let i = 0; i < listItemCheckboxes.length; i++) {
+            const listItemCheckbox = listItemCheckboxes[i];
+            listItemCheckbox.addEventListener('click', function () {
+                if (listItemCheckbox.checked) {
+                    listItemCheckbox.parentElement.children[1].classList += ' list-item-complete';
                 } else {
-                    listItem.children[1].classList = 'list-item-text';
+                    listItemCheckbox.parentElement.children[1].classList = 'list-item-text';
                 }
-            }
-        });
+            });
+        }
 
         document.getElementById('delete-button').addEventListener('click', function () {
             this.parentElement.parentElement.remove();
