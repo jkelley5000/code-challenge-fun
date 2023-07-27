@@ -1,6 +1,6 @@
 document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', documentReady()) : documentReady();
 
-function addCheckboxEventListener() {
+function addEventListeners() {
     if (document.getElementsByClassName('list-item').length > 0) {
         document.getElementById('list-item-complete-checkbox').addEventListener('click', function () {
             const listItems = document.getElementsByClassName('list-item');
@@ -14,6 +14,11 @@ function addCheckboxEventListener() {
                 }
             }
         });
+
+        document.getElementById('delete-button').addEventListener('click', function () {
+            this.parentElement.parentElement.remove();
+        });
+
     }
 }
 
@@ -29,9 +34,6 @@ function documentReady() {
                 <input type="checkbox" class="list-item-checkbox" id="list-item-complete-checkbox" />
                 <div class="list-item-text">${addNewInputValue}</div>
                 <div class="list-item-buttons">
-                    <button class="list-item-button" id="edit-button">
-                        <img src="images/edit.svg" />
-                    </button>
                     <button class="list-item-button" id="delete-button">
                         <img src="images/delete.svg" />
                     </button>
@@ -39,7 +41,7 @@ function documentReady() {
             </div>`;
             addNewInput.value = '';
 
-            addCheckboxEventListener();
+            addEventListeners();
         }
     });
 
