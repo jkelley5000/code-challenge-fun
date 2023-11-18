@@ -1,0 +1,9 @@
+Imagine you have a webpage with a navigation menu containing a list of items. 
+Each list item has a class name of "nav-item." 
+Your task is to create a CSS rule that styles the "nav-item" such that:
+
+The text is displayed in uppercase.
+The text has a bottom border with a solid line, and the color of the border should be #3498db.
+When a user hovers over a navigation item, the bottom border should change its color to #e74c3c.
+Ensure that the styling is applied to all the "nav-item" elements on the page.
+Write the CSS code for achieving this styling.
