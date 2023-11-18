@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo-name {
+        display: inherit;
+
+        .logo {
+            width: 35px;
+        }
+
+        .brand-name {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-left: 1rem;
+            font-family: 'Brand Font Family', 'Lato', sans-serif;
+        }
+    }
+
+    nav {
+        .navigation-list {
+            li {
+                a.nav-item {
+                    text-transform: uppercase;
+                    border-bottom: 1px solid #3498DB;
+                    color: $brand-color-charcoal;
+                    text-decoration: none;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    padding: 1rem;
+
+                    &:hover {
+                        border-bottom: 1px solid #E74C3C;
+                    }
+                }
+            }
+        }
+    }
+}
