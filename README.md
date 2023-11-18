@@ -4,5 +4,6 @@
 ## HTML, CSS, and JavaScript:
 - Code Challenge 1: Carousel Image Slider with infinite loop of a fixed set of images
 - Code Challenge 2: To Do List
+- Code Challenge 3: CSS - Style nav items on hover
 
 
