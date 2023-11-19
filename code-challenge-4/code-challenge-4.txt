@@ -1,0 +1,8 @@
+You have a list of objects representing books, each with a title and a 
+publication year. Your task is to write a JavaScript function that 
+takes this list of books and returns an array containing only the titles 
+of books published after the year 2000. The function should be able to 
+handle an array of books with varying lengths and structures.
+
+Write the JavaScript function to filter out the titles of books 
+published after the year 2000.
