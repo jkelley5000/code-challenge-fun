@@ -6,5 +6,6 @@
 - Code Challenge 2: To Do List
 - Code Challenge 3: CSS - Style nav items on hover
 - Code Challenge 4: JavaScript - Filtering and mapping data
+- Code Challenge 5: JavaScript - Math operation
 
 
