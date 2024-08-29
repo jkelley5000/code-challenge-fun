@@ -1,0 +1,9 @@
+You are given a TypeScript interface 'Employee' that represents an employee with 'id', 'name', 
+and 'salary'. Implement a function 'filterHighEarningEmployees' that takes an array of 'Employee' 
+objects and a 'threshold' salary value. The function should return an array of Employee objects 
+whose salary is greater than the threshold.
+
+REQUIREMENTS
+- Implement the function 'filterHighEarningEmployees' according to the interface provided.
+- Do not modify the input array directly.
+- Ensure the function has a time complexity of O(n), where n is the number of employees.
