@@ -21,5 +21,5 @@ const employees = [
 ];
 
 function filterHighEarningEmployees(employees: Employee[], threshold: number): Employee[] {
-    // Your implementation here
+    return employees.filter(employee => employee.salary > threshold);
 }
