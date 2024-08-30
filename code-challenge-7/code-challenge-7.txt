@@ -1,0 +1,8 @@
+Challenge: Flatten a Nested Array 
+
+Write a TypeScript function 'flattenArray' that takes a nested array of arbitrary depth and returns a flattened array.
+
+Requirements
+- The input array can contain elements of any type, but only arrays should be flattened.
+- The order of elements in the flattened array should be preserved.
+
