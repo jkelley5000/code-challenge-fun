@@ -7,6 +7,6 @@
 - Code Challenge 3: CSS - Style nav items on hover
 - Code Challenge 4: JavaScript - Filtering and mapping data
 - Code Challenge 5: JavaScript - Math operation
-- Code Challenge 6: TypeScript - Filtering an array of data based on dynamic values passed.
-
+- Code Challenge 6: TypeScript - Filtering an array of data based on dynamic values passed
+- Code Challenge 7: TypeScript - Flatten a nested array
 
